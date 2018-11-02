@@ -5,7 +5,7 @@ It provides some extended functionalities like following/unfollowing the other u
 
 
 ## Getting Started
-You can either download it or clone it from https://github.com/pjvj/Twitter_Backend.git in a new folder(say TwitterBackend) at some location in your PC.
+You can either download it or clone it from https://github.com/pjvj/Backend_for_twitter_like_app.git in a new folder(say TwitterBackend) at some location in your PC.
 
 ### Prerequisites
 From terminal/command prompt, change your present working directory to TwitterBackend(the folder in which you have downloaded this project).
@@ -29,7 +29,7 @@ You will see a db.sqlite file created in the TwitterBackend folder and a xxxx_in
 
 ## The templates
 The templates are just there as examples for how your templates could look like, but they work excellent as well.
-Some of the templates are: base.html , register.html , login.html , homepage.html , logout.html
+Some of the templates are: base.html , register.html , login.html , homepage.html , logout.html , users_list.html
 
 ## Documentation
 Comments are provided in the code to highlight the functionality they perform.
