@@ -1,0 +1,53 @@
+{% extends "api/base.html"  %}
+
+{% block content %}
+
+    <div class="content">
+        <div class="section-inner clearfix">
+
+        <h2>Welcome {{ user.username }} !</h2>
+
+        <form id="Display posts" action="" method="">
+          <label id="Recent" for="Recent"> <h2>Recent posts:</h2> </label>
+            {% if allposts %}
+            <table>
+                {% for posts in allposts %}
+                <tr>
+                  <td><h4>{{ posts.author.username }}</h4></td> 
+                  <td><h3>{{ posts.title }}</h3></td>
+                  <td>{{ posts.content }}</td>
+                  {% if posts in myposts %}
+                    <td>
+                    <a href="{% url 'delete_post' posts.pk %} ">
+                    Delete
+                    </a>
+                    </td>
+                    {% endif %}
+                </tr>
+                {% endfor %}
+            </table>
+            {% endif %}
+          
+        </form>
+
+        <form action="" method="post">
+          <label for="tweet"><h2>Create new Tweet:</h2> </label>
+          {% csrf_token %}
+            <table>
+                {{ form.as_table }}
+                <tr>
+                    <td></td>
+                    <td><input type="submit" value="Create"></td>
+                </tr>
+            </table>
+        </form> 
+
+        <form action="{% url 'users_list' %}" method="">
+          <label for="tweet"><h2> Choose to follow/unfollow users:</h2> </label>
+          <input type="submit" value="Choose_Users">
+        </form>
+        <h3><a href="{% url 'twitter_logout' %}">Logout</a></h3>
+
+        </div>
+    </div>
+{% endblock %}

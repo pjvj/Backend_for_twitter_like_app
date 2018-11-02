@@ -1,0 +1,21 @@
+{% extends "api/base.html"  %}
+
+{% block content %}
+
+    <div class="content">
+        <div class="section-inner clearfix">
+
+        <h2>Welcome {{ user.username }} !</h2>
+
+        <form action="{% url 'create_post' %}" method="post">
+          <label for="tweet">Create new Tweet: </label>
+          <input id="tweet" type="text" name="createTweet" value="Hi">
+          <input type="submit" value="Create">
+        </form> 
+
+        <h3><a href ="{% url 'users_list' %}">Follow</a></h3>
+        <p><a href="{% url 'twitter_logout' %}">Logout</a></p>
+
+        </div>
+    </div>
+{% endblock %}

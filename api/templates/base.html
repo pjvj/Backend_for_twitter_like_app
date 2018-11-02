@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>{% block title %}Twitter{% endblock %}</title>
+</head>
+<body>
+
+    <nav>
+        <a href="#">Home</a>
+        <a href="#">blog</a>
+        <a href="#">Contacts</a>
+    </nav>
+
+    {% block content %}
+
+    {% endblock %}
+
+    <hr>
+
+    {% block footer %}
+        This is footer
+    {% endblock %}
+
+</body>
+</html>

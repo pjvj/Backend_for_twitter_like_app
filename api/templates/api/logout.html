@@ -1,0 +1,22 @@
+
+{% extends "api/base.html" %}
+
+{% block content %}
+
+     <div class="logout">
+
+         {% if messages %}
+            <ul>
+                {% for message in messages %}
+                <li>{{ message }}</li>
+                {% endfor %}
+            </ul>
+        {% endif %}
+
+        <h1>YOU ARE LOGGED OUT</h1>
+
+         <h3><a href="{% url 'twitter_login' %}">LoginAgain</a></h3>
+        
+     </div>
+
+{% endblock %}
